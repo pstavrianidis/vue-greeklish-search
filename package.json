@@ -1,11 +1,15 @@
 {
   "name": "vue-greeklish-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/greekishsearch.umd.js",
   "module": "dist/greekishsearch.esm.js",
   "unpkg": "dist/greekishsearch.min.js",
   "browser": {
     "./sfc": "src/greekishsearch.vue"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pstavrianidis/vue-greeklish-search.git"
   },
   "files": [
     "dist/*",
