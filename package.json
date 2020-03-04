@@ -4,9 +4,11 @@
   "main": "dist/greekishsearch.umd.js",
   "module": "dist/greekishsearch.esm.js",
   "unpkg": "dist/greekishsearch.min.js",
+  "keywords": ["greeklish", "search", "greeklish search"],
   "browser": {
     "./sfc": "src/greekishsearch.vue"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/pstavrianidis/vue-greeklish-search.git"
