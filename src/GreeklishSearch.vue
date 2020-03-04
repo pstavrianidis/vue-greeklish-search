@@ -397,7 +397,7 @@ export default {
           );
         });
       }
-      console.log(greeklishText);
+      //console.log(greeklishText);
       this.$emit("input", greeklishText);
       // setTimeout(()=>{
       //    this.txt = greeklishText;
