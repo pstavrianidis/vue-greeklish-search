@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <input type="text" :value="txt" @input="greeklishToGreek" />
-  </div>
+  <input type="text" :value="txt" @input="greeklishToGreek" />
 </template>
 
 <script>
-let englishAcronymArray = new Array([
+let englishAcronymArray = new Array(
   "fb",
   "facebook",
   "twitter",
@@ -58,7 +56,7 @@ let englishAcronymArray = new Array([
   "mp3",
   "bf",
   "gf"
-]);
+);
 
 let greeklishCharactersToGreekArray = {
   tha: "θα",
@@ -236,83 +234,78 @@ let greeklishCharactersToGreekArray = {
   w: "ω"
 };
 
-// let greeklishWordsTogreekArray = {
-// 	"\\bre\\ c\\b" : "ρε συ",
-// 	"\\btpt\\b" : "τίποτα",
-// 	"\\bdn\\b" : "δεν",
-// 	"\\bd\\b" : "δεν",
-// 	"\\bm\\b" : "μου/με",
-// 	"\\bs\\b" : "σου/σε",
-// 	"\\bn\\b" : "να",
-// 	"\\btr\\b" : "τώρα",
-// 	"\\bsmr\\b" : "σήμερα",
-// 	"\\bklmr\\b" : "καλημέρα",
-// 	"\\bklnx\\b" : "καληνύχτα",
-// 	"\\bklnxt\\b" : "καληνύχτα",
-// 	"\\btlm\\b" : "τα λέμε",
-// 	"\\bsks\\b" : "σκάσε",
-// 	"\\bkn1\\b" : "κανένα",
-// 	"\\bdld\\b" : "δηλαδή",
-// 	"\\bvrm\\b" : "βαριέμαι",
-// 	"\\bmlk\\b" : "μαλάκα",
-// 	"\\bmlks\\b" : "μαλάκας/μαλακία",
-// 	"\\bmlkies\\b" : "μαλακίες",
-// 	"\\b(mnm|mna|mn)\\b" : "μήνυμα",
-// 	"\\bgt\\b" : "γιατί",
-// 	"\\btespa\\b" : "τέλος πάντων",
-// 	"\\btes\\ pa\\b" : "τέλος πάντων",
-// 	"\\b(til|thl)\\b" : "τηλέφωνο",
-// 	"\\btn\\b" : "τον/την",
-// 	"\\+fono\\b" : "συμφωνώ",
-// 	"\\bk\\b" : "και",
-// 	"\\bi\\b" : "η",
-// 	"\\bg\\b" : "για",
-// 	"\\bt\\b" : "το/τα/τη/τι",
-// 	"\\bth\\b" : "θα",
-// 	"\\bine\\b" : "είναι",
-// 	"\\bime\\b" : "είμαι",
-// 	"\\bakm\\b" : "ακόμα",
-// 	"\\banap\\b" : "αναπάντητη",
-// 	"\\betc\\b" : "έτσι",
-// 	"\\bflk\\b" : "φιλάκια",
-// 	"\\bgmt\\b" : "γαμώτο",
-// 	"\\bgt\\b" : "γιατί",
-// 	"\\bkl\\b" : "καλά",
-// 	"\\bknt\\b" : "κινητό",
-// 	"\\bkt\\b" : "κάτι",
-// 	"\\blps\\b" : "λείπεις",
-// 	"\\bmt\\b" : "μετά",
-// 	"\\bn\\b" : "να",
-// 	"\\bnmz\\b" : "νομίζω",
-// 	"\\botn\\b" : "όταν",
-// 	"\\bp\\b" : "που",
-// 	"\\bpx\\b" : "π.χ.",
-// 	"\\br\\b" : "ρε",
-// 	"\\bsk\\b" : "Σ/Κ",
-// 	"\\bspt\\b" : "σπίτι",
-// 	"\\bsxl\\b" : "σχολή/σχολείο",
-// 	"\\bt\\b" : "το/τα",
-// 	"\\bts\\b" : "της/τις",
-// 	"\\bkns\\b" : "κάνεις",
-// 	"\\blm\\b" : "λέμε",
-// 	"\\btpt\\b" : "τίποτα",
-// 	"\\bbsk\\b" : "βασικά",
-// 	"\\bfcka\\b" : "φυσικά",
-// 	"\\bgnt\\b" : "γίνετε",
-// 	"\\bitn\\b" : "ήταν",
-// 	"\\bkpn\\b" : "κάποιον",
-// 	"\\bktlvs\\b" : "κατάλαβες",
-// 	"\\blpn \\b" : "λοιπόν",
-// 	"\\bmn\\b" : "μην",
-// 	"\\bplk\\b" : "πλάκα",
-// 	"\\bprp\\b" : "πρέπει",
-// 	"\\bpt\\b" : "πότε",
-// 	"\\b8l\\b" : "θέλω",
-// 	"\\btr\\b" : "τώρα",
-// 	"\\bbb\\b" : "bye bye",
-// 	"\\bplz \\b" : "παρακαλώ",
-// 	"\\bpic\\b" : "εικόνα"
-// }
+let greeklishWordsTogreekArray = {
+  "\\bre\\ c\\b": "ρε συ",
+  "\\bdn\\b": "δεν",
+  "\\bd\\b": "δεν",
+  "\\bm\\b": "μου/με",
+  "\\bs\\b": "σου/σε",
+  "\\bsmr\\b": "σήμερα",
+  "\\bklmr\\b": "καλημέρα",
+  "\\bklnx\\b": "καληνύχτα",
+  "\\bklnxt\\b": "καληνύχτα",
+  "\\btlm\\b": "τα λέμε",
+  "\\bsks\\b": "σκάσε",
+  "\\bkn1\\b": "κανένα",
+  "\\bdld\\b": "δηλαδή",
+  "\\bvrm\\b": "βαριέμαι",
+  "\\bmlk\\b": "μαλάκα",
+  "\\bmlks\\b": "μαλάκας/μαλακία",
+  "\\bmlkies\\b": "μαλακίες",
+  "\\b(mnm|mna|mn)\\b": "μήνυμα",
+  "\\btespa\\b": "τέλος πάντων",
+  "\\btes\\ pa\\b": "τέλος πάντων",
+  "\\b(til|thl)\\b": "τηλέφωνο",
+  "\\btn\\b": "τον/την",
+  "\\+fono\\b": "συμφωνώ",
+  "\\bk\\b": "και",
+  "\\bi\\b": "η",
+  "\\bg\\b": "για",
+  "\\bt\\b": "το/τα/τη/τι",
+  "\\bth\\b": "θα",
+  "\\bine\\b": "είναι",
+  "\\bime\\b": "είμαι",
+  "\\bakm\\b": "ακόμα",
+  "\\banap\\b": "αναπάντητη",
+  "\\betc\\b": "έτσι",
+  "\\bflk\\b": "φιλάκια",
+  "\\bgmt\\b": "γαμώτο",
+  "\\bgt\\b": "γιατί",
+  "\\bkl\\b": "καλά",
+  "\\bknt\\b": "κινητό",
+  "\\bkt\\b": "κάτι",
+  "\\blps\\b": "λείπεις",
+  "\\bmt\\b": "μετά",
+  "\\bn\\b": "να",
+  "\\bnmz\\b": "νομίζω",
+  "\\botn\\b": "όταν",
+  "\\bp\\b": "που",
+  "\\bpx\\b": "π.χ.",
+  "\\br\\b": "ρε",
+  "\\bsk\\b": "Σ/Κ",
+  "\\bspt\\b": "σπίτι",
+  "\\bsxl\\b": "σχολή/σχολείο",
+  "\\bts\\b": "της/τις",
+  "\\bkns\\b": "κάνεις",
+  "\\blm\\b": "λέμε",
+  "\\btpt\\b": "τίποτα",
+  "\\bbsk\\b": "βασικά",
+  "\\bfcka\\b": "φυσικά",
+  "\\bgnt\\b": "γίνετε",
+  "\\bitn\\b": "ήταν",
+  "\\bkpn\\b": "κάποιον",
+  "\\bktlvs\\b": "κατάλαβες",
+  "\\blpn \\b": "λοιπόν",
+  "\\bmn\\b": "μην",
+  "\\bplk\\b": "πλάκα",
+  "\\bprp\\b": "πρέπει",
+  "\\bpt\\b": "πότε",
+  "\\b8l\\b": "θέλω",
+  "\\btr\\b": "τώρα",
+  "\\bbb\\b": "bye bye",
+  "\\bplz \\b": "παρακαλώ",
+  "\\bpic\\b": "εικόνα"
+};
 
 import jQuery from "jquery";
 const $ = jQuery;
@@ -325,9 +318,9 @@ export default {
     englishAcronym() {
       return englishAcronymArray;
     },
-    // greeklishWordsTogreek() {
-    //   return greeklishWordsTogreekArray;
-    // },
+    greeklishWordsTogreek() {
+      return greeklishWordsTogreekArray;
+    },
     greeklishCharactersToGreek() {
       return greeklishCharactersToGreekArray;
     }
@@ -341,8 +334,29 @@ export default {
     greeklishToGreek(e) {
       let greeklishText = e.target.value;
 
-      var words = new Array();
-      var wordsCounter = 1000;
+      // don`t convert latin characters, numbers and specified words like domain
+      // names
+      let urlRegex = /(([a-z]+:\/\/)?(([a-z0-9]+\.)+([a-z]{2}|com|org|net|int|edu|gov|mil|arpa|gr|cy))(:[0-9]{1,5})?(\/[a-z0-9_\-~]+)*(\/([a-z0-9_\-\]*)([a-z0-9+_\-%=&amp;]*)?)?(#[a-zA-Z0-9!$&'()*+.=-_~:@/?]*)?)(\s+|$)/gi;
+
+      // search strings and return the matches
+      var urlsArray = greeklishText.match(urlRegex);
+      var urlwordsCounter = 1000;
+
+      if (urlsArray) {
+        // no need to lookup the length with jquery each, so we dont use for
+        // loop
+        // use array and callback
+        $.each(urlsArray, function(key, value) {
+          greeklishText = greeklishText.replace(
+            value,
+            "[****]" + urlwordsCounter + "[****]"
+          );
+          urlwordsCounter++;
+        });
+      }
+
+      let words = new Array();
+      let wordsCounter = 1000;
 
       $.each(englishAcronymArray, function(key, value) {
         // perform global case-insesitive march using gi modifier and match
@@ -357,10 +371,10 @@ export default {
         words.push(value);
       });
 
-      //   $.each(greeklishWordsTogreekArray, function(key, value) {
-      //     // perform global case-insesitive march using gi modifier
-      //     greeklishText = greeklishText.replace(RegExp(key, "gi"), value);
-      //   });
+      $.each(greeklishWordsTogreekArray, function(key, value) {
+        // perform global case-insesitive march using gi modifier
+        greeklishText = greeklishText.replace(RegExp(key, "gi"), value);
+      });
 
       $.each(greeklishCharactersToGreekArray, function(key, value) {
         // perform global march using g modifier
@@ -374,8 +388,20 @@ export default {
           value
         );
       });
+
+      if (urlsArray) {
+        $.each(urlsArray, function(index, value) {
+          greeklishText = greeklishText.replace(
+            "[****]" + (1000 + index) + "[****]",
+            value
+          );
+        });
+      }
       console.log(greeklishText);
       this.$emit("input", greeklishText);
+      // setTimeout(()=>{
+      //    this.txt = greeklishText;
+      // }, 3500);
       // this.txt = greeklishText;
     }
   }
