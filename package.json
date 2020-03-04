@@ -1,10 +1,14 @@
 {
   "name": "vue-greeklish-search",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist/greekishsearch.umd.js",
   "module": "dist/greekishsearch.esm.js",
   "unpkg": "dist/greekishsearch.min.js",
-  "keywords": ["greeklish", "search", "greeklish search"],
+  "keywords": [
+    "greeklish",
+    "search",
+    "greeklish search"
+  ],
   "browser": {
     "./sfc": "src/greekishsearch.vue"
   },
