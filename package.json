@@ -1,6 +1,6 @@
 {
   "name": "vue-greeklish-search",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist/greekishsearch.umd.js",
   "module": "dist/greekishsearch.esm.js",
   "unpkg": "dist/greekishsearch.min.js",
