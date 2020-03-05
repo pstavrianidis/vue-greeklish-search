@@ -7,7 +7,12 @@
   "keywords": [
     "greeklish",
     "search",
-    "greeklish search"
+    "greeklish search",
+    "greek",
+    "greek-language",
+    "vue-components",
+    "vuejs",
+    "vuejs2"
   ],
   "browser": {
     "./sfc": "src/greekishsearch.vue"
