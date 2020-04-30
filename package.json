@@ -42,7 +42,7 @@
     "@vue/babel-preset-app": "^4.2.3",
     "cross-env": "^5.2.0",
     "expose-loader": "^0.7.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "minimist": "^1.2.2",
     "rollup": "^1.14.4",
     "rollup-plugin-buble": "^0.19.6",
